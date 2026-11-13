@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A & P</title>
+
+  <!-- Favicon de boda (anillos entrelazados en SVG directo) -->
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='40' cy='52' r='26' fill='none' stroke='%23c5a059' stroke-width='7'/><circle cx='60' cy='48' r='26' fill='none' stroke='%23c5a059' stroke-width='7'/></svg>">
+
+  <!-- Tipografías elegantes de Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@300;400;500&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="src/style.css">
+</head>
+
+<body>
+
+  <!-- PORTADA / HERO -->
+  <header class="hero">
+    <div class="hero-container">
+
+      <!-- Columna Foto: Marco elegante con la foto íntegra -->
+      <div class="hero-image-wrap">
+        <img src="src/images/fondo.jpg" alt="Alicia y Pedro" class="hero-img">
+      </div>
+
+      <!-- Columna Contenido: Títulos, cuenta atrás y calendario -->
+      <div class="hero-content">
+        <p class="pre-title">¡Nos casamos!</p>
+        <h1>Alicia & Pedro</h1>
+        <p class="wedding-date">Sábado, 24 de abril de 2027</p>
+
+        <!-- Cuenta atrás (JS) -->
+        <div id="countdown" class="countdown">
+          <div class="time-box"><span id="days">00</span><small>Días</small></div>
+          <div class="time-box"><span id="hours">00</span><small>Horas</small></div>
+          <div class="time-box"><span id="minutes">00</span><small>Minutos</small></div>
+          <div class="time-box"><span id="seconds">00</span><small>Segundos</small></div>
+        </div>
+
+        <!-- Añadir al calendario -->
+        <div class="calendar-btn-wrap">
+          <a id="btn-calendar" href="#" target="_blank" class="btn btn-secondary">
+            📅 Guardar fecha en Google Calendar
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </header>
+
+  <main class="container">
+
+    <!-- NUEVA SECCIÓN: NOSOTROS -->
+    <section class="section" id="nosotros">
+      <span class="section-tag">Nuestra Historia</span>
+
+      <!-- Carrusel de fotos -->
+      <div class="carousel-container">
+        <div class="carousel-track" id="carouselTrack">
+          <div class="carousel-slide active">
+            <img src="src/images/fondo.jpg" alt="Momento 1">
+          </div>
+          <div class="carousel-slide active">
+            <img src="src/images/1.jpeg" alt="Momento 1">
+          </div>
+          <div class="carousel-slide">
+            <img src="src/images/2.jpeg" alt="Momento 2">
+          </div>
+          <div class="carousel-slide">
+            <img src="src/images/3.jpeg" alt="Momento 3">
+          </div>
+          <div class="carousel-slide">
+            <img src="src/images/4.jpeg" alt="Momento 4">
+          </div>
+          <div class="carousel-slide">
+            <img src="src/images/5.jpeg" alt="Momento 5">
+          </div>
+          <div class="carousel-slide">
+            <img src="src/images/6.jpeg" alt="Momento 6">
+          </div>
+          <div class="carousel-slide">
+            <img src="src/images/7.jpeg" alt="Momento 7">
+          </div>
+          <div class="carousel-slide">
+            <img src="src/images/8.jpeg" alt="Momento 8">
+          </div>
+          <div class="carousel-slide">
+            <img src="src/images/9.jpeg" alt="Momento 9">
+          </div>
+          <div class="carousel-slide">
+            <img src="src/images/10.jpeg" alt="Momento 10">
+          </div>
+          <div class="carousel-slide">
+            <img src="src/images/11.jpeg" alt="Momento 11">
+          </div>
+          <div class="carousel-slide">
+            <img src="src/images/12.jpeg" alt="Momento 12">
+          </div>
+          <div class="carousel-slide">
+            <img src="src/images/13.jpeg" alt="Momento 13">
+          </div>
+          <div class="carousel-slide">
+            <img src="src/images/14.jpeg" alt="Momento 14">
+          </div>
+          <div class="carousel-slide">
+            <img src="src/images/15.jpeg" alt="Momento 15">
+          </div>
+          <div class="carousel-slide">
+            <img src="src/images/16.jpeg" alt="Momento 16">
+          </div>
+          <div class="carousel-slide">
+            <img src="src/images/17.jpeg" alt="Momento 17">
+          </div>
+          <div class="carousel-slide">
+            <img src="src/images/18.jpeg" alt="Momento 18">
+          </div>
+          <div class="carousel-slide">
+            <img src="src/images/19.jpeg" alt="Momento 19">
+          </div>
+          <div class="carousel-slide">
+            <img src="src/images/20.jpeg" alt="Momento 20">
+          </div>
+          <div class="carousel-slide">
+            <img src="src/images/21.jpeg" alt="Momento 21">
+          </div>
+          <div class="carousel-slide">
+            <img src="src/images/22.jpeg" alt="Momento 22">
+          </div>
+          <div class="carousel-slide">
+            <img src="src/images/23.jpeg" alt="Momento 23">
+          </div>
+          <div class="carousel-slide">
+            <img src="src/images/24.jpeg" alt="Momento 24">
+          </div>
+          <div class="carousel-slide">
+            <img src="src/images/25.jpeg" alt="Momento 25">
+          </div>
+          <div class="carousel-slide">
+            <img src="src/images/26.jpeg" alt="Momento 26">
+          </div>
+          <div class="carousel-slide">
+            <img src="src/images/27.jpeg" alt="Momento 27">
+          </div>
+          <div class="carousel-slide">
+            <img src="src/images/28.jpeg" alt="Momento 28">
+          </div>
+          <div class="carousel-slide">
+            <img src="src/images/29.jpeg" alt="Momento 29">
+          </div>
+          <div class="carousel-slide">
+            <img src="src/images/30.jpeg" alt="Momento 30">
+          </div>
+        </div>
+
+        <!-- Flechas de navegación -->
+        <button class="carousel-btn prev" id="carouselPrev" aria-label="Foto anterior">&#10094;</button>
+        <button class="carousel-btn next" id="carouselNext" aria-label="Siguiente foto">&#10095;</button>
+
+        <!-- Indicadores (puntos) -->
+        <div class="carousel-dots" id="carouselDots">
+          <span class="dot active" data-index="0"></span>
+          <span class="dot" data-index="1"></span>
+          <span class="dot" data-index="2"></span>
+        </div>
+      </div>
+
+      <div class="story-content">
+        <p>
+          Todo empezó en una clase de biología en el instituto Alhaken II, donde nos sentaron juntos por obra de magia
+          (bueno, y porque nuestros apellidos empiezan por la misma letra, que el azar también sabe de logística).
+        </p>
+        <p>
+          Sea como fuere, en aquel pupitre empezó a escribirse el cariño más bonito que unos chavales de dieciséis años
+          podían inventar. Las risas cómplices, los apuntes compartidos y esa manía tan sana de empezar a preocuparnos
+          el uno por el otro.
+          Poco a poco, nuestros corazones se fueron acercando hasta que, un día 24 —igual que el de nuestra boda—,
+          decidimos empezar a caminar juntos.
+        </p>
+        <p>
+          Desde entonces hemos crecido, nos hemos descubierto, hemos navegado algunos que otros vaivenes y, sobre todo,
+          nos hemos sentido siempre acompañados de vuestra mano.
+          La vida decidió abrigarnos el uno con el otro y, con el corazón saltando de alegría, nos propuso el viaje más
+          bonito de todos: celebrar y vivir en este amor.
+          Y queríamos compartirlo como se merece: con todos vosotros, las personas que habéis sido testigos, refugio y
+          hogar en nuestra historia. ¡Nos vemos en la boda!
+        </p>
+      </div>
+    </section>
+
+    <!-- EL DÍA DEL EVENTO -->
+    <section class="section" id="itinerario">
+      <span class="section-tag">Ubicaciones</span>
+      <h2>El Gran Día</h2>
+
+      <div class="grid-cards">
+        <div class="card">
+          <div class="card-icon">💍</div>
+          <h3>Ceremonia</h3>
+          <p class="time">12:00 h</p>
+          <p class="place"><strong>Iglesia de Santa Marina de Aguas Santas</strong></p>
+          <p class="address">Pl. de Sta. Marina, 6, Centro, 14001 Córdoba</p>
+          <a href="https://www.google.com/maps/place/Real+Iglesia+de+Santa+Marina+de+Aguas+Santas/@37.8898518,-4.7749681,16z/data=!3m1!4b1!4m6!3m5!1s0xd6cdf7bcd2c42fd:0x1deae08fb173ef25!8m2!3d37.8898518!4d-4.7749681!16s%2Fm%2F0bmgx6n?hl=es&entry=ttu&g_ep=EgoyMDI2MDkyOC4wIKXMDSoASAFQAw%3D%3D"
+            target="_blank" rel="noopener" class="btn btn-card">
+            Ver mapa
+          </a>
+        </div>
+
+        <div class="card">
+          <div class="card-icon">🥂</div>
+          <h3>Celebración</h3>
+          <p class="time">14:30 h</p>
+          <p class="place"><strong>Hotel DWO Finca los Abetos</strong></p>
+          <p class="address">Av. de San José de Calasanz, Km. 2, 8, Nte. Sierra, 14012 Córdoba</p>
+          <a href="https://www.google.com/maps/place/Hotel+DWO+Finca+los+Abetos/@37.9259632,-4.7918986,17z/data=!4m11!3m10!1s0xd6cdf1737346c0f:0x21a15240d7423fd7!5m4!1s2026-11-11!2i2!4m1!1i2!8m2!3d37.9259632!4d-4.7918986!16s%2Fg%2F1hc35ty6h?hl=es&entry=ttu&g_ep=EgoyMDI2MDkyOC4wIKXMDSoASAFQAw%3D%3D"
+            target="_blank" rel="noopener" class="btn btn-card">
+            Ver mapa
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- DETALLES PRÁCTICOS -->
+    <section class="section" id="informacion">
+      <span class="section-tag">Información</span>
+      <h2>Detalles de Interés</h2>
+
+      <div class="accordion">
+        <details>
+          <summary>🚌 Transporte y Autobuses</summary>
+          <p>Pondremos autobuses a vuestra disposición desde el centro de la ciudad hacia el convite y de vuelta al
+            finalizar la fiesta.</p>
+        </details>
+
+        <details>
+          <summary>🏨 Alojamiento Recomendado</summary>
+          <p>
+            Para quienes vengáis de fuera, el Hotel DWO Finca los Abetos, donde se celebrará el convite, ofrece tarifas especiales indicando que venís
+            a la boda.
+          </p>
+          <p><br> </p>
+          <p>
+            Otra opción en el centro de Córdoba es el <strong><a href="https://www.hotelescenter.es/hotel-cordoba-center/" target="_blank" rel="noopener">Hotel Córdoba Center</a></strong>, que también ofrece un 14% de descuento para los invitados con el código "<strong>AYP240427</strong>".
+          </p>
+        </details>
+      </div>
+    </section>
+
+    <!-- REGALOS / NÚMERO DE CUENTA -->
+    <section class="section" id="regalo">
+      <span class="section-tag">El mejor regalo</span>
+      <h2>Vuestra Compañía</h2>
+      <p class="gift-text">
+        El mejor regalo para nosotros es contar con vosotros este día. Pero si queréis hacernos un detalle para empezar
+        esta nueva etapa, podéis hacerlo aquí:
+      </p>
+
+      <div class="bank-card">
+        <p class="bank-label">Número de cuenta (IBAN):</p>
+        <div class="iban-wrapper">
+          <code id="iban-text">ES06 0049 1778 5321 1009 3236</code>
+          <button id="copy-btn" class="btn-copy" title="Copiar al portapapeles">
+            📋 Copiar IBAN
+          </button>
+        </div>
+        <span id="copy-message" class="copy-alert hidden">¡Copiado en el portapapeles!</span>
+      </div>
+    </section>
+
+    <!-- FORMULARIO RSVP DE GOOGLE -->
+    <section class="section" id="rsvp">
+      <span class="section-tag">Asistencia</span>
+      <h2>Confirma tu Asistencia</h2>
+      <p>Rogamos confirmación antes del <strong>1 de Febrero de 2027</strong> para organizar las mesas y menús.</p>
+
+      <div class="form-container">
+        <iframe
+          src="https://docs.google.com/forms/d/e/1FAIpQLSeX3k7Yzqv7RHAAT4CW9BEwXVe0Z3zO0tiyRQH7xUMjLtP53Q/viewform?usp=dialog"
+          width="100%" height="800" frameborder="0" marginheight="0" marginwidth="0">
+          Cargando formulario…
+        </iframe>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>Con cariño,</p>
+    <p class="footer-names">Alicia & Pedro</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

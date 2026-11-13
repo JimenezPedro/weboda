@@ -1,0 +1,775 @@
+/* ==========================================================================
+   PALETA DE COLORES Y VARIABLES (Tonos cálidos, lino y arena)
+   ========================================================================== */
+:root {
+  --bg-main: #fdfbf7;        /* Blanco roto muy cálido de fondo */
+  --bg-card: #ffffff;        /* Fondo blanco puro para tarjetas */
+  --bg-alt: #f4ede4;         /* Beige arena suave para secciones o detalles */
+  --text-main: #4a443f;      /* Marrón café muy oscuro, mucho más suave que el negro */
+  --text-muted: #7d756d;     /* Tono topo para subtítulos y textos secundarios */
+  
+  --primary: #947a66;        /* Tono lino tostado / tierra cálido */
+  --primary-hover: #7d6553;
+  --accent: #b29d89;         /* Beige medio para bordes e iconos */
+  --accent-soft: #eae2d6;    /* Arena clarito para fondos interactivos */
+  
+  --shadow-soft: 0 10px 30px rgba(117, 100, 85, 0.06);
+  --shadow-hover: 0 15px 35px rgba(117, 100, 85, 0.12);
+  --radius: 16px;
+  --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+/* ==========================================================================
+   RESET Y BASE
+   ========================================================================== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg-main);
+  color: var(--text-main);
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+  line-height: 1.7;
+  letter-spacing: 0.2px;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ==========================================================================
+   TIPOGRAFÍAS Y ENCABEZADOS
+   ========================================================================== */
+h1, h2, h3 {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-weight: 400;
+  color: var(--primary);
+  line-height: 1.2;
+}
+
+.section-tag {
+  display: inline-block;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: var(--accent);
+  margin-bottom: 6px;
+  font-weight: 500;
+}
+
+h2 {
+  font-size: 2.4rem;
+  letter-spacing: 0.5px;
+  margin-bottom: 12px;
+}
+/* ==========================================================================
+   PORTADA / HERO (Escritorio: Split Editorial con foto completa)
+   ========================================================================== */
+.hero {
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 24px;
+  background-color: var(--bg-alt);
+  background-image: radial-gradient(circle at 50% 30%, rgba(255, 255, 255, 0.7), rgba(244, 237, 228, 0.9));
+  position: relative;
+}
+
+.hero-container {
+  max-width: 1100px;
+  width: 100%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 50px;
+}
+
+/* Marco de la fotografía en escritorio */
+.hero-image-wrap {
+  width: 100%;
+  max-width: 440px;
+  margin: 0 auto;
+  padding: 12px;
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 15px 40px rgba(117, 100, 85, 0.12);
+  border: 1px solid var(--accent-soft);
+}
+
+.hero-img {
+  width: 100%;
+  height: auto;
+  max-height: 75vh;
+  object-fit: cover;
+  border-radius: 12px;
+  display: block;
+}
+
+/* Columna de texto */
+.hero-content {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.pre-title {
+  font-size: 0.85rem;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--accent);
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.hero h1 {
+  font-size: 3.8rem;
+  font-weight: 400;
+  color: var(--primary);
+  line-height: 1.1;
+  margin-bottom: 8px;
+}
+
+.wedding-date {
+  font-size: 1.3rem;
+  font-style: italic;
+  font-family: 'Cormorant Garamond', serif;
+  color: var(--text-muted);
+  margin-bottom: 30px;
+}
+
+/* ==========================================================================
+   CUENTA ATRÁS
+   ========================================================================== */
+.countdown {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 25px;
+}
+
+.time-box {
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(234, 226, 214, 0.85);
+  padding: 12px 14px;
+  min-width: 70px;
+  border-radius: 12px;
+  box-shadow: var(--shadow-soft);
+}
+
+.time-box span {
+  display: block;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--primary);
+  line-height: 1;
+}
+
+.time-box small {
+  font-size: 0.65rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-top: 4px;
+  display: block;
+}
+
+.calendar-btn-wrap {
+  margin-top: 5px;
+}
+
+/* ==========================================================================
+   BOTONES
+   ========================================================================== */
+.btn {
+  display: inline-block;
+  padding: 10px 24px;
+  border-radius: 30px;
+  font-size: 0.85rem;
+  text-decoration: none;
+  letter-spacing: 1px;
+  transition: var(--transition);
+  cursor: pointer;
+  border: none;
+}
+
+.btn-secondary {
+  background: rgba(255, 255, 255, 0.92);
+  color: var(--text-main);
+  border: 1px solid var(--accent-soft);
+  box-shadow: var(--shadow-soft);
+}
+
+.btn-secondary:hover {
+  background: var(--bg-card);
+  border-color: var(--accent);
+  transform: translateY(-2px);
+}
+
+.btn-card {
+  background-color: var(--bg-alt);
+  color: var(--primary);
+  font-weight: 400;
+  margin-top: 15px;
+}
+
+.btn-card:hover {
+  background-color: var(--primary);
+  color: #ffffff;
+}
+
+/* ==========================================================================
+   CONTENIDO Y SECCIONES
+   ========================================================================== */
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 60px 20px 20px;
+}
+
+.section {
+  text-align: center;
+  margin-bottom: 70px;
+}
+
+.section p {
+  color: var(--text-muted);
+  max-width: 550px;
+  margin: 0 auto;
+}
+
+/* Tarjetas de lugares */
+.grid-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.card {
+  background: var(--bg-card);
+  padding: 35px 25px;
+  border-radius: var(--radius);
+  border: 1px solid var(--accent-soft);
+  box-shadow: var(--shadow-soft);
+  transition: var(--transition);
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-hover);
+}
+
+.card-icon {
+  font-size: 1.8rem;
+  margin-bottom: 12px;
+}
+
+.card h3 {
+  font-size: 1.6rem;
+  margin-bottom: 6px;
+}
+
+.card .time {
+  font-weight: 500;
+  color: var(--primary);
+  margin-bottom: 8px;
+}
+
+.card .place {
+  color: var(--text-main);
+}
+
+.card .address {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+/* Acordeón (Detalles) */
+.accordion {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+details {
+  background: var(--bg-card);
+  border: 1px solid var(--accent-soft);
+  border-radius: 12px;
+  padding: 16px 20px;
+  text-align: left;
+  transition: var(--transition);
+}
+
+details[open] {
+  box-shadow: var(--shadow-soft);
+  border-color: var(--accent);
+}
+
+summary {
+  font-weight: 400;
+  color: var(--text-main);
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+summary::-webkit-details-marker {
+  display: none;
+}
+
+summary::after {
+  content: '＋';
+  font-size: 1.1rem;
+  color: var(--accent);
+  transition: transform 0.2s ease;
+}
+
+details[open] summary::after {
+  content: '－';
+}
+
+details p {
+  margin-top: 12px;
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  text-align: left;
+}
+
+details p a {
+  color: var(--primary);
+  text-decoration: underline;
+  transition: var(--transition);
+}
+
+/* ==========================================================================
+   CARRUSEL DE FOTOS (PC: imagen íntegra sin recortes / Móvil: cover)
+   ========================================================================== */
+.carousel-container {
+  position: relative;
+  width: 100%;
+  max-width: 750px;       /* Anchura más amplia para disfrutar las fotos en monitor */
+  height: 550px;          /* Altura suficiente para que las verticales luzcan grandes */
+  margin: 25px auto 30px;
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-soft);
+  border: 1px solid var(--accent-soft);
+  background-color: var(--bg-alt); /* Fondo arena suave para los bordes en fotos verticales */
+}
+
+.carousel-track {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.carousel-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.8s ease-in-out, visibility 0.8s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel-slide.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.carousel-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;    /* Muestra la fotografía completa sin recortar nada en PC */
+  display: block;
+}
+
+/* Flechas */
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.85);
+  color: var(--text-main);
+  border: 1px solid var(--accent-soft);
+  font-size: 1.2rem;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  z-index: 2;
+  box-shadow: var(--shadow-soft);
+}
+
+.carousel-btn:hover {
+  background: #ffffff;
+  color: var(--primary);
+  transform: translateY(-50%) scale(1.08);
+}
+
+.carousel-btn.prev {
+  left: 16px;
+}
+
+.carousel-btn.next {
+  right: 16px;
+}
+
+/* Indicadores / Puntos */
+.carousel-dots {
+  position: absolute;
+  bottom: 14px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+  z-index: 2;
+}
+
+.carousel-dots .dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.6);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.carousel-dots .dot.active {
+  background: #ffffff;
+  transform: scale(1.25);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+}
+
+/* ==========================================================================
+   RESPONSIVE MÓVIL (Mantiene el diseño original)
+   ========================================================================== */
+@media (max-width: 600px) {
+  .carousel-container {
+    max-width: 100%;
+    height: 300px;
+    background-color: var(--bg-card);
+  }
+
+  .carousel-slide img {
+    object-fit: cover;    /* En móvil vuelve a rellenar todo el contenedor */
+  }
+
+  .carousel-btn {
+    width: 34px;
+    height: 34px;
+    font-size: 1rem;
+  }
+
+  .carousel-btn.prev {
+    left: 10px;
+  }
+
+  .carousel-btn.next {
+    right: 10px;
+  }
+}
+
+
+/* ==========================================================================
+   SECCIÓN REGALO / IBAN
+   ========================================================================== */
+.bank-card {
+  background: var(--bg-alt);
+  padding: 30px;
+  border-radius: var(--radius);
+  margin-top: 30px;
+  display: inline-block;
+  width: 100%;
+  max-width: 500px;
+  box-shadow: var(--shadow-soft);
+}
+
+.bank-label {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+
+.iban-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin: 10px 0;
+}
+
+#iban-text {
+  background: var(--bg-card);
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  color: var(--text-main);
+  border: 1px solid var(--accent-soft);
+  font-family: inherit;
+}
+
+.btn-copy {
+  background: var(--primary);
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  transition: var(--transition);
+}
+
+.btn-copy:hover {
+  background: var(--primary-hover);
+}
+
+.copy-alert {
+  display: block;
+  font-size: 0.8rem;
+  color: var(--primary);
+  margin-top: 8px;
+  transition: opacity 0.3s;
+}
+
+.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+/* ==========================================================================
+   FORMULARIO GOOGLE
+   ========================================================================== */
+.form-container {
+  margin-top: 35px;
+  background: var(--bg-card);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-soft);
+  border: 1px solid var(--accent-soft);
+}
+
+.form-container iframe {
+  display: block;
+}
+
+/* ==========================================================================
+   FOOTER
+   ========================================================================== */
+footer {
+  text-align: center;
+  padding: 50px 20px 60px;
+  border-top: 1px solid var(--accent-soft);
+  background-color: var(--bg-main);
+}
+
+footer p {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.footer-names {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.8rem;
+  color: var(--primary);
+  margin-top: 5px;
+}
+
+/* ==========================================================================
+   SECCIÓN NOSOTROS & VÍDEO
+   ========================================================================== */
+.video-container {
+  position: relative;
+  width: 100%;
+  max-width: 650px;
+  margin: 25px auto 30px;
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-soft);
+  border: 1px solid var(--accent-soft);
+  background: #000000;
+  aspect-ratio: 16 / 9;
+}
+
+.video-container video,
+.video-container iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
+  object-fit: contain;
+}
+
+.story-content {
+  max-width: 620px;
+  margin: 0 auto;
+}
+
+.story-content p {
+  margin-bottom: 16px;
+  font-size: 1rem;
+  line-height: 1.8;
+  color: var(--text-main);
+}
+
+.story-content p:first-of-type::first-letter {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 2.2rem;
+  line-height: 1;
+  float: left;
+  margin-right: 8px;
+  color: var(--primary);
+}
+
+/* ==========================================================================
+   RESPONSIVE (MÓVILES)
+   ========================================================================== */
+@media (max-width: 600px) {
+  .hero {
+    padding-top: 40px;
+    background-position: center center;
+  }
+
+  .hero h1 {
+    font-size: 2.6rem;
+    margin-bottom: 8px;
+  }
+
+  .wedding-date {
+    font-size: 1.1rem;
+    margin-bottom: 18px;
+  }
+  
+  .countdown {
+    gap: 8px;
+    margin-bottom: 16px;
+  }
+
+  .time-box {
+    min-width: 58px;
+    padding: 6px 8px;
+  }
+
+  .time-box span {
+    font-size: 1.4rem;
+  }
+
+  .time-box small {
+    font-size: 0.55rem;
+  }
+
+  .iban-wrapper {
+    flex-direction: column;
+  }
+
+  #iban-text {
+    font-size: 0.85rem;
+    width: 100%;
+  }
+
+  .btn-copy {
+    width: 100%;
+  }
+}
+
+/* ==========================================================================
+   RESPONSIVE MÓVIL: MODO BACKGROUND CLÁSICO
+   ========================================================================== */
+@media (max-width: 768px) {
+  .hero {
+    min-height: 100vh;
+    padding: 60px 20px 40px;
+    align-items: flex-start;
+    justify-content: center;
+    /* La foto pasa a ser el fondo completo en vertical */
+    background-image: 
+      radial-gradient(circle at 50% 30%, rgba(255, 255, 255, 0.82), rgba(244, 237, 228, 0.55)),
+      url('images/fondo.jpg');
+    background-size: cover;
+    background-position: center top;
+  }
+
+  .hero-container {
+    display: block; /* Desactiva las columnas de grid */
+    max-width: 100%;
+  }
+
+  /* Oculta la imagen fija para que actúe el background */
+  .hero-image-wrap {
+    display: none;
+  }
+
+  .hero-content {
+    margin-top: 10px;
+  }
+
+  .hero h1 {
+    font-size: 2.7rem;
+    margin-bottom: 6px;
+  }
+
+  .wedding-date {
+    font-size: 1.15rem;
+    margin-bottom: 22px;
+  }
+
+  .countdown {
+    gap: 8px;
+    margin-bottom: 20px;
+  }
+
+  .time-box {
+    min-width: 60px;
+    padding: 8px 10px;
+  }
+
+  .time-box span {
+    font-size: 1.5rem;
+  }
+
+  .time-box small {
+    font-size: 0.55rem;
+  }
+
+  .iban-wrapper {
+    flex-direction: column;
+  }
+
+  #iban-text {
+    font-size: 0.85rem;
+    width: 100%;
+  }
+
+  .btn-copy {
+    width: 100%;
+  }
+}
