@@ -719,10 +719,16 @@ footer p {
     justify-content: center;
     /* La foto pasa a ser el fondo completo en vertical */
     background-image: 
-      radial-gradient(circle at 50% 30%, rgba(255, 255, 255, 0.82), rgba(244, 237, 228, 0.55)),
+      radial-gradient(circle at 50% 25%, rgba(255, 255, 255, 0.45), rgba(244, 237, 228, 0.20)),
       url('images/fondo.jpg');
     background-size: cover;
     background-position: center top;
+  }
+
+  .pre-title,
+  .hero h1,
+  .wedding-date {
+    text-shadow: 0 2px 12px rgba(255, 255, 255, 0.9);
   }
 
   .hero-container {
