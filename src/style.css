@@ -2,6 +2,7 @@
    PALETA DE COLORES Y VARIABLES (Tonos cálidos, lino y arena)
    ========================================================================== */
 :root {
+  color-scheme: light only;
   --bg-main: #fdfbf7;        /* Blanco roto muy cálido de fondo */
   --bg-card: #ffffff;        /* Fondo blanco puro para tarjetas */
   --bg-alt: #f4ede4;         /* Beige arena suave para secciones o detalles */
@@ -40,6 +41,12 @@ body {
   line-height: 1.7;
   letter-spacing: 0.2px;
   -webkit-font-smoothing: antialiased;
+}
+
+html, body {
+  background-color: #fdfbf7 !important;
+  background-image: linear-gradient(to bottom, #fdfbf7, #fdfbf7) !important;
+  color: #4a443f !important;
 }
 
 /* ==========================================================================
